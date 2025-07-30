@@ -3,7 +3,7 @@
   const state = {};
 
   function sendToServer(endpoint, payload) {
-    fetch('https://track.pier39.ai/' + endpoint, {
+    fetch('https://dev.personapay.tech/advertisers/' + endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,7 +29,7 @@
         timestamp: new Date().toISOString(),
         ...eventData
       };
-      sendToServer('track', payload);
+      sendToServer('conversion/webhook', payload);
     }
   }
 
