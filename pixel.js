@@ -3,7 +3,7 @@
   const state = {};
 
   function sendToServer(endpoint, payload) {
-    fetch('https://dev.personapay.tech/advertisers/' + endpoint, {
+    fetch('https://dev.personapay.tech/advertisers/campaign' + endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
